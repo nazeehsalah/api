@@ -1,0 +1,28 @@
+[2018-09-27 16:12:15.081] [exthost1] [info] extension host started
+[2018-09-27 16:12:15.135] [exthost1] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:15.135] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/out/extension
+[2018-09-27 16:12:15.194] [exthost1] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:15.194] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2018-09-27 16:12:15.362] [exthost1] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:15.362] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2018-09-27 16:12:16.227] [exthost1] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:16.227] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/out/extension
+[2018-09-27 16:12:16.263] [exthost1] [info] ExtensionService#_doActivateExtension vscode.search-rg {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:16.263] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/search-rg/out/extension
+[2018-09-27 16:12:16.280] [exthost1] [info] ExtensionService#_doActivateExtension Atishay-Jain.All-Autocomplete {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:16.280] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nazeeh/.vscode/extensions/atishay-jain.all-autocomplete-0.0.16/out/src/extension
+[2018-09-27 16:12:16.430] [exthost1] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:16.430] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nazeeh/.vscode/extensions/dbaeumer.vscode-eslint-1.6.0/client/out/extension
+[2018-09-27 16:12:16.876] [exthost1] [info] ExtensionService#_doActivateExtension gencer.html-slim-scss-css-class-completion {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:16.876] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nazeeh/.vscode/extensions/gencer.html-slim-scss-css-class-completion-1.1.1/out/src/extension
+[2018-09-27 16:12:19.153] [exthost1] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:19.153] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nazeeh/.vscode/extensions/hookyqr.beautify-1.4.4/extension
+[2018-09-27 16:12:19.394] [exthost1] [info] ExtensionService#_doActivateExtension michelemelluso.code-beautifier {"startup":true,"activationEvent":"*"}
+[2018-09-27 16:12:19.394] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nazeeh/.vscode/extensions/michelemelluso.code-beautifier-2.1.0/out/src/extension
+[2018-09-27 16:12:19.498] [exthost1] [info] eager extensions activated
+[2018-09-27 16:12:19.503] [exthost1] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
+[2018-09-27 16:12:19.503] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/php-language-features/out/phpMain
+[2018-09-27 16:12:19.604] [exthost1] [info] ExtensionService#_doActivateExtension bschulte.php-autocomplete {"startup":false,"activationEvent":"onLanguage:php"}
+[2018-09-27 16:12:19.605] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nazeeh/.vscode/extensions/bschulte.php-autocomplete-0.4.2/out/src/extension
+[2018-09-27 16:12:19.629] [exthost1] [info] ExtensionService#_doActivateExtension kokororin.vscode-phpfmt {"startup":false,"activationEvent":"onLanguage:php"}
+[2018-09-27 16:12:19.629] [exthost1] [info] ExtensionService#loadCommonJSModule /home/nazeeh/.vscode/extensions/kokororin.vscode-phpfmt-1.0.30/out/src/extension
