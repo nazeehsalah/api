@@ -26,22 +26,38 @@ if (isset($_GET["password"]) && isset($_GET["username"])) {
     /*
      * next if condition to retrive data for graph as a list
      */
-    if (isset($_GET['months']) && count(json_decode($_GET['months']))) {
-        $index = count($_GET["parmlist"][0]);
-        $monthes = json_decode($_GET['months'], true);
-        $countList = [];
-        for ($i = 0; $i < count($monthes); $i++) {
-            $newPar = array("create_date", "<", $monthes[$i]);
-            $_GET["parmlist"][0][$index + 0] = $newPar;
-            $newPar = array("create_date", ">", $monthes[$i + 1]);
-            $_GET["parmlist"][0][$index + 1] = $newPar;
-            $countList[$i] = callMethods($_GET["uid"], $_GET["password"], $_GET["modalname"], $_GET["method"], $_GET["parmlist"], $_GET["mappinglist"]);
-            if ($i + 2 == count($monthes)) {
-               /*  echo json_encode($i+2); */
-                break;
+    if ((isset($_GET['months']) && count(json_decode($_GET['months']))) || isset($_GET['lob']) || isset($_GET['ins'])) {
+        if (isset($_GET['lob']) && $_GET['lob'] == "true") {
+            $lis = array();
+            $lob = json_decode(callMethods($_GET["uid"], $_GET["password"], "insurance.line.business", "search_read", array(), array("fields" => array("line_of_business"))), true);
+            for ($i = 0; $i < count($lob); $i++) {
+                $lis[$lob[$i]['line_of_business']] = callMethods($_GET["uid"], $_GET["password"], $_GET["modalname"], $_GET["method"], array(array(array("line_of_bussines", '=', $lob[$i]['id']))), $_GET["mappinglist"]);
             }
-        }
-        echo json_encode($countList);
+            echo json_encode($lis);
+        } else if (isset($_GET['ins']) && $_GET['ins'] = "true") {
+            $insReturn = array();
+            $insList = json_decode(callMethods($_GET["uid"], $_GET["password"], "res.partner", "search_read", array(array(array("insurer_type", "=", true))), array("fields" => array("name"))), true);
+            for ($i = 0; $i < count($insList); $i++) {
+                // $lis[$i]=$lob[$i]['id'];
+                $insReturn[$insList[$i]['name']] = callMethods($_GET["uid"], $_GET["password"], $_GET["modalname"], $_GET["method"], array(array(array("company", '=', $insList[$i]['id']))), $_GET["mappinglist"]);
+            }
+            echo json_encode($insReturn);
+        } else {
+            $index = count($_GET["parmlist"][0]);
+            $monthes = json_decode($_GET['months'], true);
+            $countList = [];
+            for ($i = 0; $i < count($monthes); $i++) {
+                $newPar = array("create_date", "<", $monthes[$i]);
+                $_GET["parmlist"][0][$index + 0] = $newPar;
+                $newPar = array("create_date", ">", $monthes[$i + 1]);
+                $_GET["parmlist"][0][$index + 1] = $newPar;
+                $countList[$i] = callMethods($_GET["uid"], $_GET["password"], $_GET["modalname"], $_GET["method"], $_GET["parmlist"], $_GET["mappinglist"]);
+                if ($i + 2 == count($monthes)) {
+                    /*  echo json_encode($i+2); */
+                    break;
+                }
+            }
+            echo json_encode($countList);}
     } else {
         echo callMethods($_GET["uid"], $_GET["password"], $_GET["modalname"], $_GET["method"], $_GET["parmlist"], $_GET["mappinglist"]);
     }
